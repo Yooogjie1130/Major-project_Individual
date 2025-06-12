@@ -6,11 +6,11 @@ let snakeSize = 20; // Size of the snake
 let imgScale = 1;   // Image zoom ratio
 let imgXOffset = 0; // Image center offset
 let imgYOffset = 0; // Reserve the vertical offset
-let canvas;
+let canvas; 
 
-let snake1 = []; // Perlin noise snake
-let snake2 = []; // Random walk snake
-let noiseOffset = 0;
+let snake1 = []; // Perlin noise snake (top-left, blue)
+let snake2 = []; // Random walk snake (bottom-right, red)
+let noiseOffset = 0; // Offset used as the time axis for Perlin noise to produce smooth directional changes
 
 let snakeSpeedSlider; // Slider for controlling snake speed
 let snakeSpeed = 2; // Default snake speed
@@ -40,7 +40,7 @@ function setup() {
 
   // Create the restart button
   restartButton = createButton('Restart (Top-Left)');
-  restartButton.position(windowWidth - 240, windowHeight - 180); // // keep it at the bottom right corner
+  restartButton.position(windowWidth - 240, windowHeight - 180); // keep it at the bottom right corner
   restartButton.mousePressed(restart);
   restartButton.style('font-family', 'inherit');
   restartButton.style('font-size', '16px');
@@ -64,9 +64,7 @@ function restart() {
   // Reset both snakes (each will store segments as an array of positions)
   snake1 = [];
   snake2 = [];
-
-  // let's add a variable
-  gameOver = false;
+  gameOver = false; // let's add a variable
   winnerText = "";
 
   let start1 = createVector(dots[0].x, dots[0].y);
