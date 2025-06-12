@@ -41,7 +41,7 @@ function setup() {
   // Create the restart button
   restartButton = createButton('Restart (Top-Left)');
   restartButton.position(windowWidth - 240, windowHeight - 180); // // keep it at the bottom right corner
-  restartButton.mousePressed(restartTopLeft);
+  restartButton.mousePressed(restart);
   restartButton.style('font-family', 'inherit');
   restartButton.style('font-size', '16px');
 
@@ -61,8 +61,11 @@ function restart() {
   canvas.position(0, 0);
 
   calculateImageAndDots();
+  // Reset both snakes (each will store segments as an array of positions)
   snake1 = [];
   snake2 = [];
+
+  // let's add a variable
   gameOver = false;
   winnerText = "";
 
@@ -131,8 +134,10 @@ function windowResized() {
 function calculateImageAndDots() {
   dots = [];
   img = imgOriginal.get();
+
+  // Resize the image to keep the original ratio. Reference: https://p5js.org/reference/#/p5.Image/resize
   img.resize(0, height);
-  imgScale = height / img.height;
+  imgScale = height / img.height; 
   imgXOffset = (width - img.width) / 2;
   imgYOffset = 0;
 
