@@ -1,20 +1,21 @@
-let imgOriginal;
-let dots = [];
-let xStep = 10;
-let yStep = 10;
-let snakeSize = 20;
-let imgScale = 1;
-let imgXOffset = 0;
-let imgYOffset = 0;
+let imgOriginal;    // The original image will not be modified
+let dots = [];      // Stores all Dot instances
+let xStep = 10;     // Lateral pixel spacing
+let yStep = 10;     // Vertical pixel spacing
+let snakeSize = 20; // Size of the snake
+let imgScale = 1;   // Image zoom ratio
+let imgXOffset = 0; // Image center offset
+let imgYOffset = 0; // Reserve the vertical offset
+let canvas;
 
 let snake1 = []; // Perlin noise snake
 let snake2 = []; // Random walk snake
 let noiseOffset = 0;
 
-let snakeSpeedSlider;
-let snakeSpeed = 2;
+let snakeSpeedSlider; // Slider for controlling snake speed
+let snakeSpeed = 2; // Default snake speed
 let speedLabel;
-let restartButton;
+let restartButton; // Add a button
 
 let gameOver = false;
 let winnerText = "";
@@ -23,22 +24,23 @@ function preload() {
   imgOriginal = loadImage('assets/Piet_Mondrian Broadway_Boogie_Woogie.jpeg');
 }
 
-let canvas;
-
 function setup() {
   canvas = createCanvas(800, 800);
-  canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);
+  canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2); // Default centered
   noStroke();
 
+  // UI elements
   snakeSpeedSlider = createSlider(1, 20, 2);
-  snakeSpeedSlider.position(windowWidth - 240, windowHeight - 100);
+  snakeSpeedSlider.position(windowWidth - 240, windowHeight - 100); //  keep it at the bottom right corner
   snakeSpeedSlider.style('width', '200px');
 
+  // Create a <div> element to label the snake speed slider (p5.js DOM function)
   speedLabel = createDiv("Snake Speed");
   speedLabel.position(windowWidth - 240, windowHeight - 130);
 
+  // Create the restart button
   restartButton = createButton('Restart (Top-Left)');
-  restartButton.position(windowWidth - 240, windowHeight - 180);
+  restartButton.position(windowWidth - 240, windowHeight - 180); // // keep it at the bottom right corner
   restartButton.mousePressed(restartTopLeft);
   restartButton.style('font-family', 'inherit');
   restartButton.style('font-size', '16px');
@@ -53,7 +55,8 @@ function setup() {
   }
 }
 
-function restartTopLeft() {
+function restart() {
+  // Resize canvas to same size, but make sure it's aligned top-left
   createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
 
