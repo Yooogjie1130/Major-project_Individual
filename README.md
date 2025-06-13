@@ -31,7 +31,7 @@ When a snake eats red dots, it grows longer; blue dots, it becomes shorter.
 What makes my animation different is the competitive snake interaction and color-recognition-based logic—this goes beyond simple motion and introduces a rule-based game dynamic.
 
  Inspiration
- !(assets/Inspiration)
+ ![Inspiration](assets/Inspiration)
 The main inspiration is Mondrian’s Broadway Boogie Woogie.
 I wanted to simulate “lines moving through a city,” like traffic and rhythm in an urban grid.
 I was also inspired by classic Snake games and generative art, aiming to create a sense of “rhythmic chaos” using algorithmic movement.
