@@ -45,6 +45,7 @@ The Dot class has a checkIfEaten() method that detects proximity between a snake
 Snake positions are stored using createVector() and updated frame by frame.
 let start1 = createVector(dots[0].x, dots[0].y);
 let start2 = createVector(width - 20, height - 20);
+![vector](assets/vector)
 The Perlin snake uses noise (noiseOffset) to determine direction, incrementing offset for smooth flow.
 The random walker updates direction with slight changes to lastAngle, simulating inertia.
 
