@@ -39,6 +39,8 @@ I was also inspired by classic Snake games and generative art, aiming to create 
  Technical Overview
 The pixel grid is generated using get() and resize(), then brightness is mapped to size using map().
 ![resize](assets/Resize)
+
+![brightness](assets/bri)
 The Dot class has a checkIfEaten() method that detects proximity between a snake’s head and each dot.
 Snake positions are stored using createVector() and updated frame by frame.
 let start1 = createVector(dots[0].x, dots[0].y);
