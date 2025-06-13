@@ -11,6 +11,8 @@ Random Walker
 ![Random Snake Win](assets/Random_snake_win.png)
 Perlin Noise
 ![Perlin Snake Win](assets/perlin_noise_win.png)
+Tie 
+![It's a tie](assets/tie.png)
 
  My Personal Animation Approach
 Building on the group’s base code, I designed a dual-snake competitive system:
