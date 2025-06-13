@@ -43,9 +43,10 @@ The pixel grid is generated using get() and resize(), then brightness is mapped 
 ![brightness](assets/bri)
 The Dot class has a checkIfEaten() method that detects proximity between a snake’s head and each dot.
 Snake positions are stored using createVector() and updated frame by frame.
-let start1 = createVector(dots[0].x, dots[0].y);
-let start2 = createVector(width - 20, height - 20);
+snake.push(createVector(dots[0].x, dots[0].y));
+
 ![vector](assets/vector)
+
 The Perlin snake uses noise (noiseOffset) to determine direction, incrementing offset for smooth flow.
 The random walker updates direction with slight changes to lastAngle, simulating inertia.
 
