@@ -8,6 +8,7 @@ Use the slider at the bottom right to adjust the snake speed (range: 1 to 50).
 Click the “Restart” button to reset both snakes to their starting positions.
 When the two snakes collide, the winner is displayed based on their length (longer wins; if equal, it’s a tie).
 ![Random Snake Win](assets/perlin_noise_win_.png)
+![Perlin Snake Win]assets/perlin_noise_win_.png)
 
  My Personal Animation Approach
 Building on the group’s base code, I designed a dual-snake competitive system:
