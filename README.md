@@ -7,7 +7,9 @@ The other is controlled by a random walk algorithm (a red square snake).
 Use the slider at the bottom right to adjust the snake speed (range: 1 to 50).
 Click the “Restart” button to reset both snakes to their starting positions.
 When the two snakes collide, the winner is displayed based on their length (longer wins; if equal, it’s a tie).
+Random Walker
 ![Random Snake Win](assets/perlin_noise_win_.png)
+Perlin Noise
 ![Perlin Snake Win](assets/perlin_noise_win.png)
 
  My Personal Animation Approach
