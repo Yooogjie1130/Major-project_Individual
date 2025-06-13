@@ -1,5 +1,6 @@
 # Major-project_Individual
 How to Interact with the Project
+
 Once the page loads, a background image (Mondrian's artwork) is automatically transformed into a pixelated grid canvas.
 There are two "snakes" on the screen:
 One is driven by Perlin noise (a green circular snake).
