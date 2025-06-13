@@ -7,7 +7,7 @@ The other is controlled by a random walk algorithm (a red square snake).
 Use the slider at the bottom right to adjust the snake speed (range: 1 to 50).
 Click the “Restart” button to reset both snakes to their starting positions.
 When the two snakes collide, the winner is displayed based on their length (longer wins; if equal, it’s a tie).
-Random_snake_win_png.
+Assets_Random_snake_win_png.
 
  My Personal Animation Approach
 Building on the group’s base code, I designed a dual-snake competitive system:
